@@ -12,6 +12,11 @@ count = 0
 for row in rows:
     split_row = row.split(',')
     full_data.append(split_row)
+    first_row = full_data[0]
     count+=1
 print(full_data)
 print('Esse arquivo tem %s linhas'%(count))
+contador=0
+for colum in first_row:
+    contador +=1
+print('O arquivo tem %s colunas'%(contador))
