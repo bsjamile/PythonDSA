@@ -1,12 +1,12 @@
 # Exercício 1 - Crie uma estrutura que pergunte ao usuário qual o dia da semana. Se o dia for igual a Domingo ou 
 # igual a sábado, imprima na tela "Hoje é dia de descanso", caso contrário imprima na tela "Você precisa trabalhar!"
 
-# ask = input('Qual o dia da semana? ')
+ask = input('Qual o dia da semana? ')
 
-# if ask == 'Domingo' or ask == 'Sábado':
-#     print('Hoje é dia de descanso!')
-# else:
-#     print('Você precisa trabalhar!')
+if ask == 'Domingo' or ask == 'Sábado':
+    print('Hoje é dia de descanso!')
+else:
+    print('Você precisa trabalhar!')
 
 # Exercício 2 - Crie uma lista de 5 frutas e verifique se a fruta 'Morango' faz parte da lista
 
@@ -64,7 +64,7 @@ quatro = 4
 
 while quatro <= 20:
     lista.append(quatro)
-    quatro +=1
+    quatro +=2
 print(lista)
 
 
@@ -98,4 +98,4 @@ contador = 0
 for letra in frase:
     if letra == 'r':
         contador+=1
-print(f'Existe {contador}x a letra r na frase acima!')
+print('Existe %sx a letra r na frase acima!'%(contador))
