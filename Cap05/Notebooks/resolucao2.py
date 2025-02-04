@@ -1,23 +1,26 @@
+# %%
 # Exercício 1 - Crie uma estrutura que pergunte ao usuário qual o dia da semana. Se o dia for igual a Domingo ou 
 # igual a sábado, imprima na tela "Hoje é dia de descanso", caso contrário imprima na tela "Você precisa trabalhar!"
 
-# ask = input('Qual o dia da semana? ')
+ask = input('Qual o dia da semana? ')
 
-# if ask == 'Domingo' or ask == 'Sábado':
-#     print('Hoje é dia de descanso!')
-# else:
-#     print('Você precisa trabalhar!')
+if ask == 'Domingo' or ask == 'Sábado':
+    print('Hoje é dia de descanso!')
+else:
+    print('Você precisa trabalhar!')
 
+# %%
 # Exercício 2 - Crie uma lista de 5 frutas e verifique se a fruta 'Morango' faz parte da lista
 
 lista = ['Mamao','Banana','Pera','Uva','Morango']
 
 for morango in lista:
-    if morango == 'Morango':
+    morango = morango.lower()
+    if morango == 'morango':
         print('Morango está na lista!')
 
 
-
+# %%
 # Exercício 3 - Crie uma tupla de 4 elementos, multiplique cada elemento da tupla por 2 e guarde os resultados em uma 
 # lista
 
@@ -29,11 +32,13 @@ for i in tp:
     lista.append(i)
 print(lista)
 
+# %%
 # Exercício 4 - Crie uma sequência de números pares entre 100 e 150 e imprima na tela
 
 for i in range(100,151,2):
     print(i)
 
+# %%
 # Exercício 5 - Crie uma variável chamada temperatura e atribua o valor 40. Enquanto temperatura for maior que 35, 
 # imprima as temperaturas na tela
 
@@ -43,6 +48,7 @@ while temperatura > 35:
     print(temperatura)
     temperatura -= 1
 
+# %%
 # Exercício 6 - Crie uma variável chamada contador = 0. Enquanto counter for menor que 100, imprima os valores na tela,
 # mas quando for encontrado o valor 23, interrompa a execução do programa
 
@@ -54,8 +60,7 @@ while contador < 100:
     if contador == 23:
         break
 
-
-
+# %%
 # Exercício 7 - Crie uma lista vazia e uma variável com valor 4. Enquanto o valor da variável for menor ou igual a 20, 
 # adicione à lista, apenas os valores pares e imprima a lista
 
@@ -64,10 +69,10 @@ quatro = 4
 
 while quatro <= 20:
     lista.append(quatro)
-    quatro +=1
+    quatro +=2
 print(lista)
 
-
+# %%
 # Exercício 8 - Transforme o resultado desta função range em uma lista: range(5, 45, 2)
 # nums = range(5, 45, 2)
 
@@ -77,13 +82,15 @@ for i in range(5,45,2):
     lista2.append(i)
 print(lista2)
 
+# %%
 # Exercício 9 - Faça a correção dos erros no código abaixo e execute o programa. Dica: são 3 erros.
 temperatura = float(input('Qual a temperatura? '))
 if temperatura > 30:
     print('Vista roupas leves.')
 else:
     print('Busque seus casacos.')
-
+    
+# %%
 # Exercício 10 - Faça um programa que conte quantas vezes a letra "r" aparece na frase abaixo. Use um placeholder na 
 # sua instrução de impressão
 
@@ -93,9 +100,50 @@ frase = "A gratidão é a virtude das almas nobres. O quão feliz é uma pessoa 
 
 print(frase)
 
-contador = 0 
+contador = sum(1 for letra in frase if letra == 'r')
 
-for letra in frase:
-    if letra == 'r':
-        contador+=1
-print(f'Existe {contador}x a letra r na frase acima!')
+# for letra in frase:
+#     if letra == 'r':
+#         contador+=1
+print('Existe %sx a letra r na frase acima!'%(contador))
+# %%
+def divide(x):
+    return x/2
+
+lista = [2,4,6]
+
+retorno = list(map(divide,lista))
+
+print(retorno)
+# %%
+# Criando uma lista
+temperaturas = [0, 22.5, 40, 100]
+# Usando expressão lambda
+map(lambda x: (5.0/9)*(x - 32), temperaturas)
+# %%
+
+print(list(map(lambda x: x/2,lista)))
+
+lista_dividida = list(map(lambda x: x/2,lista))
+
+# [i for i in lista_dividida]
+
+for i in lista_dividida:
+    print(i)
+
+# for item in map(lambda x: x/2,lista):
+#     print(item)
+# %%
+# Somando os elementos de 2 listas
+a = [1,2,3,4,0]
+b = [5,6,7,8,0]
+c = [6,2,3,1,9]
+# %%
+soma_lista = list(map(lambda x,y:x+y,a,b))
+soma_lista
+                
+# %%
+soma_lista_maior = list(map(lambda x,y,z:x+y+z, a,b,c))
+# %%
+soma_lista_maior
+# %%
