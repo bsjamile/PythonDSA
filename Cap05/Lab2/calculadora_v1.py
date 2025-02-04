@@ -43,3 +43,8 @@ for letra in nome:
     if letra == 'e':
         contador += 1
 print(f'{nome} tem {contador}x a letra e!')
+
+
+nome = 'Alberlene'
+contador = sum(1 for letra in nome if letra == 'e')
+print(f'{nome} tem {contador}x a letra e!')
