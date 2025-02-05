@@ -61,8 +61,8 @@ lista = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
 # Data e Science na frase: 'A Data Science Academy oferce os melhores cursos de análise de dados do Brasil.'
 import re
 texto = 'A Data Science Academy oferece os melhores cursos de análise de dados do Brasil.'
-resultado = re.findall(r"", texto)
-
+resultado = re.findall(r"Data Science\s(\w+)", texto)
+print(resultado)
 
 
 # %%
