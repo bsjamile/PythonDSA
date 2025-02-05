@@ -92,3 +92,43 @@ for i, iten in enumerate("Data Science Acadamy"):
 for i, iten in enumerate(range(10)):
     print(i,iten)
 # %%
+try:
+    8 + 's'
+except TypeError:
+    print("Erro! Reveja seu codigo")
+# %%
+try:
+    print('Hello')
+except TypeError:
+    print("Erro! Reveja seu codigo")
+# %%
+try:
+    f = open('praticar.py','w')
+    f.write('Gravando no arquivo')
+except IOError:
+    print("Erro: arquivo nao encontrado ou nao pode ser salvo")
+else:
+    print("Conteúdo gravado com sucesso!")
+    f.close()
+# %%
+try:
+    f = open('praticar','r')
+    f.write('Gravando no arquivo')
+except IOError:
+    print("Erro: arquivo nao encontrado ou nao pode ser salvo")
+else:
+    print("Conteúdo gravado com sucesso!")
+    f.close()
+# %%
+# Finally será executado independente de ter dado erro ou nao
+try:
+    f = open('praticar.py','w')
+    f.write('Gravando no arquivo')
+except IOError:
+    print("Erro: arquivo nao encontrado ou nao pode ser salvo")
+else:
+    print("Conteúdo gravado com sucesso!")
+    f.close()
+finally:
+    print("Comandos no bloco finally são sempre executados")
+# %%
