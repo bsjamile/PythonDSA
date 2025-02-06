@@ -83,8 +83,10 @@ dict1 = {'a':1,'b':2}
 dict2 = {'c':4,'d':5}
 
 dict3 = {}
-for key, item in dict1.keys(),dict1.values():
-    dict3[key] = item
+
+# dict3.update(dict1)
+# dict3.update(dict2)
+dict3 = list(zip(dict1,dict2.values()))
 
 print(dict3)
 # %%
@@ -102,6 +104,6 @@ for i, item in enumerate(lista):
 # Data e Science na frase: 'A Data Science Academy oferce os melhores cursos de análise de dados do Brasil.'
 import re
 texto = 'A Data Science Academy oferece os melhores cursos de análise de dados do Brasil.'
-resultado = re.findall(r"Data Science\s(.*)", texto)
+resultado = re.findall(r"Data Science\s(.*)", texto) #. significa qlqr caracter e * zero ou mais
 print(resultado)
 # %%
